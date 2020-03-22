@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="exercise">
+    <p>VueJS is pretty cool - {{name}} ({{age}})</p>
+    <p>{{age*3}}</p>
+    <p>{{randomFloat()}}</p>
+    <p>{{ Math.floor(randomFloat()*100)}}</p>
+    <div>
+         <img style="width:100px;height:100px" v-bind:src="img"> 
+    </div>
+    <div>
+        <input type="text" v-bind:value="name">
+    </div>
+</div>
+<script>
+    new Vue({
+        el:'#exercise',
+        data:{
+            name: 'Mustermann',
+            age: '30',
+            img: 'img.jpg'
+         },
+         methods:{
+             randomFloat: function(){
+                return Math.random();
+             }
+         }
+    });
+   
+
+</script>
+</body>
+</html>
