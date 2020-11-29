@@ -1,0 +1,1 @@
+This is the repo used to practice lessons and exercises from the Udemy Vue course : https://www.udemy.com/course/vuejs-2-the-complete-guide/
