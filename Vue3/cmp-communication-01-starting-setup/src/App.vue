@@ -10,7 +10,7 @@
         :name="friend.name"
         :phone-number="friend.phone"
         :email-address="friend.email"
-        :is-favorite = "true"
+        @toggle-favorite="toggleFavoriteStatus"
       >
       </friend-contact>
     </ul>
@@ -27,16 +27,24 @@ export default {
           name: "Manuel Lorenz",
           phone: "0123 45678 90",
           email: "manuel@localhost.com",
+          isFavorite: true
         },
         {
           id: "julie",
           name: "Julie Jones",
           phone: "0987 654421 21",
           email: "julie@localhost.com",
+          isFavorite: false
         },
       ],
     };
   },
+  methods:{
+    toggleFavoriteStatus(friendId){
+      const statusChangedFriend = this.friends.find(friend => friend.id === friendId);
+      statusChangedFriend.isFavorite = !statusChangedFriend.isFavorite;
+    }
+  }
 };
 </script>
 

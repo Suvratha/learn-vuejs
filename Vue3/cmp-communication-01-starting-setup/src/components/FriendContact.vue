@@ -22,6 +22,10 @@
 export default {
 //  props: ["name", "phoneNumber", "emailAddress", "isFavorite"],
   props: {
+    id:{
+      type: String,
+      required: true
+    },
     name: {
       type: String,
       required: true
@@ -51,7 +55,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite() {
-     this.friendIsFavorite = !this.friendIsFavorite;
+     this.$emit('toggle-favorite');
       }
     }
 };
