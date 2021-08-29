@@ -1,12 +1,14 @@
 <template>
     <user-data @new-user="setActiveUser" ></user-data>
-    <active-user>
-        :name = "username",
-        :age = "age"
+    <active-user
+        :name = "username"
+        :age = "age">
     </active-user>
 </template>
 <script>
+import UserData from './components/UserData.vue';
 export default {
+  components: { UserData },
     data(){
         return{
             username:'',
@@ -15,7 +17,7 @@ export default {
     },
     methods: {
         setActiveUser(newuser, newage){
-            this.usname= newuser;
+            this.username= newuser;
             this.age = newage;
         } 
     }

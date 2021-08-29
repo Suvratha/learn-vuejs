@@ -1,27 +1,16 @@
 <template>
-  <form @submit.prevent="submitData">
-    <div>
-      <label>Name:</label>
-      <input type="text" />
-    </div>
-    <div>
-      <label>Age:</label>
-      <input type="text" />
-    </div>
-    <button>Submit</button>
-  </form>
+  <h2>Username: {{ name }}</h2>
+  <h3>Age: {{ age }}</h3>
 </template>
 <script>
-export default {
-    props:{
-        name:{
-            type: String,
-            required: true
-        },
-        age:{
-            type: String,
-            required: true
-        }
-    }
+export default {  
+  props: {
+    name: {
+      type: String
+    },
+    age: {
+      type: String
+    },
+  }
 };
 </script>

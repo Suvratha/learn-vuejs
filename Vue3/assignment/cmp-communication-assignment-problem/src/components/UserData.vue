@@ -1,8 +1,15 @@
 <template>
-  <li>
-    <h2>Username: {{ username }}</h2>
-  </li>
-  <li>Age: {{ age }}</li>
+  <form @submit.prevent="submitData">
+    <div>
+      <label>Name:</label>
+      <input type="text" v-model="enteredName" />
+    </div>
+    <div>
+      <label>Age:</label>
+      <input type="text" v-model="enteredAge" />
+    </div>
+    <button>Submit</button>
+  </form>
 </template>
 <script>
 export default {
